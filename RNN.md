@@ -4,7 +4,7 @@
 
 网络结构如图：
 
-![6e28bccb944dba0c7e6c5b9ead7e144c_rnn](https://github.com/satori555/Subterranean-Animism/blob/master/image_storage/RNN.assets/6e28bccb944dba0c7e6c5b9ead7e144c_rnn.jpg)
+![.](./image_storage/rnn_1.jpg)
 
 
 
