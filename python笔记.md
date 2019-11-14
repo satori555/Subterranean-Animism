@@ -80,24 +80,6 @@ with open(w_file, 'w', encoding='utf-8') as wp:
     wp.write(content)
 ```
 
-读Excel
-
-```python
-excel = xlrd.open_workbook('test.xlsx')
-sheet = excel.sheet_by_name('Sheet1')
-for rid in range(sheet.nrows):
-    label = sheet.cell_value(row, col)
-```
-
-写Excel
-
-```python
-workbook = xlwt.Workbook(encoding='utf-8')
-worksheet = workbook.add_sheet('Sheet1')
-worksheet.write(row, col, content)
-workbook.save('test.xlsx')
-```
-
 
 
 ## 5. 输入输出
