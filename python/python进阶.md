@@ -1,124 +1,24 @@
-[TOC]
+# Python进阶
 
-## 1. 字符串
+## 1. 赋值
 
-str.join(seq)：序列seq的所有元素以字符str连接
-
-s.split(str=' ', num)：str分隔符，默认空字符（空格 \n \t等），num分割次数
-
-s.strip()：删除字符串头尾指定字符，默认为空格或换行符
-
-格式化字符串
+直接赋值、浅拷贝和深度拷贝
 
 ```python
->>>str = "the length of (%s) is %d" %('runoob',len('runoob'))
+import copy
+b = a
+# 直接赋值是一个完完全全的引用，对新变量的任何改动都会影响到原对象。
+c = copy.copy(a)
+# 浅拷贝创建了新的对象，但是只拷贝了序列的元素，对于元素也是一个序列的情况（即子对象），只复制了对这个序列的引用！如 a[0] = [1, 2] 是一个列表，则相当于 c[0] = a[0]。
+d = copy.deepcopy(a)
+# 深拷贝是完完全全的拷贝，把原对象完整地拷贝到了新对象中。对新变量的改动不影响原变量。
 ```
 
-字符串前面的 r b u f
+## 2. 生成器与迭代器
 
-r：去除转义字符，常用于正则表达式
+待补充https://www.liaoxuefeng.com/wiki/1016959663602400/1017269809315232
 
-f：表示字符串内支持大括号内的python表达式
-
-b：表示后面字符串是bytes类型。网络编程中，服务器和浏览器只认bytes类型数据
-
-u：后面的字符串以Unicode格式编码，一般用于中文字符串前面
-
-## 2. 列表
-
-list.append()：向列表尾部添加一个新元素
-
-list.extend()：只接受一个列表作为参数，添加到原有列表中
-
-list = [0 for _ in range(100)]
-
-
-
-## 3. 字典
-
-dict2 = dict1.copy()：浅拷贝
-
-dict.update(dict2)
-把字典dict2的键/值对更新到dict里，可用于合并
-
-dict1 = dict.fromkeys(seq[, value])
-
-创建一个新字典，以列表 seq 中元素做字典的键，value 为所有键的初始值
-
-dict.get(key, default=None)
-
-返回指定键的值，如果值不在字典中返回default值。
-
-dict.setdefault(key, default=None)
-和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default
-
-dict.has_key(key)
-如果键在字典dict里返回true，否则返回false
-
-dict.items()
-以列表返回可遍历的(键, 值) 元组数组
-
-dict.keys()，dict.values()
-以列表返回一个字典所有的键，值
-
-
-
-## 4. 文件
-
-读文件
-
-```python
-with open(file, 'r', encoding='utf-8') as fp:
-    for line in fp.readlines():
-        pass
-```
-
-写文件
-
-```python
-with open(w_file, 'w', encoding='utf-8') as wp:
-    wp.write(content)
-```
-
-
-
-## 5. 输入输出
-
-输入input()，可以接收python表达式
-
-```python
->>>str = input("请输入：")
-请输入：[x*5 for x in range(2,10,2)]
-```
-
-格式化输出
-
-```python
->>>str = "the length of (%s) is %d" %('runoob',len('runoob')) 
->>>print(str)
-the length of (runoob) is 6 
-```
-
-str.format()
-
-```python
->>> "{1} {0} {1}".format("hello", "world")  # 设置指定位置
-'world hello world'
-
-print("网站名：{name}, 地址 {url}".format(name="菜鸟教程", url="www.runoob.com"))
- 
-# 通过字典设置参数
-site = {"name": "菜鸟教程", "url": "www.runoob.com"}
-print("网站名：{name}, 地址 {url}".format(**site))
- 
-# 通过列表索引设置参数
-my_list = ['菜鸟教程', 'www.runoob.com']
-print("网站名：{0[0]}, 地址 {0[1]}".format(my_list))  # "0" 是必须的
-```
-
-
-
-## 6. 异常
+## 3. 异常
 
 实例：
 
@@ -178,7 +78,7 @@ raise [Exception [, args [, traceback]]]
 
 
 
-## 7. 正则表达式
+## 4. 正则表达式
 
 在线测试工具： http://c.runoob.com/front-end/854 
 
@@ -271,21 +171,7 @@ if s:
 
 
 
-## 8. 赋值
-
-直接赋值、浅拷贝和深度拷贝
-
-```python
-import copy
-b = a
-# 直接赋值是一个完完全全的引用，对新变量的任何改动都会影响到原对象。
-c = copy.copy(a)
-# 浅拷贝创建了新的对象，但是只拷贝了序列的元素，对于元素也是一个序列的情况（即子对象），只复制了对这个序列的引用！如 a[0] = [1, 2] 是一个列表，则相当于 c[0] = a[0]。
-d = copy.deepcopy(a)
-# 深拷贝是完完全全的拷贝，把原对象完整地拷贝到了新对象中。对新变量的改动不影响原变量。
-```
-
-## 9. 函数
+## 5. 函数式编程
 
 ```python
 lambda x, y : (x + y) 
@@ -346,6 +232,3 @@ print(func(5))
 
 
 
-## 10. 面向对象
-
-继承，封装，多态

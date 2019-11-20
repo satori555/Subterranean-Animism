@@ -1,16 +1,18 @@
 # Subterranean-Animism
 
-记录学习笔记，这里是提纲。持续更新
+学习笔记，持续更新。
 
 ## Python
 
 python基础
 
-python高级
+python进阶
 
-numpy & pandas
+面向对象编程
 
+Numpy与Pandas
 
+常用模块
 
 ## 计算机基础
 
@@ -22,11 +24,11 @@ numpy & pandas
 
 
 
-## 算法
+## 数据结构与算法
 
-二分查找
+数据结构
 
-各种排序算法：插入，冒泡，快排，归并，堆，基数排序
+排序算法
 
 动态规划
 
@@ -45,8 +47,6 @@ sklearn
 
 
 ## 深度学习
-
-误差逆传播
 
 多层感知机
 
@@ -77,8 +77,4 @@ keras
 ## 搜索
 
 
-
-## 大数据分析
-
-Hadoop
 
