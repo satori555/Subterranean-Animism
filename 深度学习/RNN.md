@@ -4,7 +4,7 @@
 
 网络结构如图：
 
-![.](./image_storage/rnn_1.jpg)
+![.](../image_storage/rnn_1.jpg)
 
 
 
