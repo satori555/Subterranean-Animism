@@ -13,6 +13,9 @@ a.dot(b)
 np.cumsum(a)
 np.diff(a)
 
+# 生成随机数
+a = np.random.randint(100, size=30)
+
 # 索引
 A = np.arange(3, 15).reshape(3, 4)
 print(A[2][1])
