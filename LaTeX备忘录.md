@@ -4,7 +4,7 @@
 
 向量：$\vec x$ 加粗：$\boldsymbol x$
 
-
+字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$
 
 多行公式对齐
 $$
@@ -32,3 +32,4 @@ $$
 
 $\max \limits_x f(x)$
 
+求和$\sum$ 连乘 $\prod$
