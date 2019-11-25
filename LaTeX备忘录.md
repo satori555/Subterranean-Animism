@@ -1,6 +1,6 @@
 # LaTeX备忘录
 
-持续更新，想到什么加什么。
+### 持续更新，想到什么加什么。
 
 向量：$\vec x$ 加粗：$\boldsymbol x$
 
@@ -25,6 +25,12 @@ $$
  用\left和\right来显示不同的括号：
 
 小括号：$\left( \frac 12 \right)$ 花括号：$\left\{ \frac 12 \right\}$ 绝对值：$\left| x \right|$ $\left\| x \right\|$
+
+二元运算符：
+
+圆圈 $a\circ b$  加减 $\pm$ 乘号 $\times$  除号 $\div$  直积 $\otimes$ 
+
+各种等号 $\equiv \simeq \doteq \approx \propto \neq$  不等号 $\le \ge \ll \gg$
 
 
 
