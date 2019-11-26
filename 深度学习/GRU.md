@@ -2,7 +2,7 @@
 
 GRU的网络结构如图：
 
- ![img](D:\Users\test\Documents\GitHub\Subterranean-Animism\image_storage\20170814103515255.png) 
+ ![img](../image_storage/GRU.png) 
 
 GRU是LSTM的一个变体，只有两个门：更新门$z_t$和重置门$r_t$。
 
