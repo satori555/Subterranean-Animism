@@ -22,9 +22,23 @@ f(x)=
 \sin(t) & t\ne 1
 \end{cases}
 $$
- 用\left和\right来显示不同的括号：
+ 矩阵
+$$
+ \begin{Bmatrix}
+   1 & 2 & 3 \\
+   4 & 5 & 6 \\
+   7 & 8 & 9
+  \end{Bmatrix} \tag{M}
+$$
+行间矩阵：我们使用矩阵 $\bigl( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \bigr)$ 作为因子矩阵，将其...
+
+
+
+用\left和\right来显示不同的括号：
 
 小括号：$\left( \frac 12 \right)$ 花括号：$\left\{ \frac 12 \right\}$ 绝对值：$\left| x \right|$ $\left\| x \right\|$
+
+
 
 二元运算符：
 

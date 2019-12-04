@@ -8,14 +8,31 @@ LSTM可以解决普通RNN的梯度消失问题。
 
 四个门分别接收当前时刻的输入$x_t$和上一时刻隐藏层的状态$h_{t-1}$，然后计算隐藏状态$C_t$，最后隐藏状态$C_t$和输出门$o_t$决定当前时刻的隐藏层$h_t$，同时输出$z_t$。公式如下：
 $$
-f_t=\sigma(W_{xf}x_t+W_{hf}h_{t-1}+b_f) \\
 i_t=\sigma(W_{xi}x_t+W_{hi}h_{t-1}+b_i) \\
+f_t=\sigma(W_{xf}x_t+W_{hf}h_{t-1}+b_f) \\
+o_t=\sigma(W_{xo}x_t+W_{ho}h_{t-1}+b_o) \\
 g_t=\tanh(W_{xc}x_t+W_{hc}h_{t-1}+b_c) \\
 c_t=f_t\circ c_{t-1}+i_t\circ g_t \\
-o_t=\sigma(W_{xo}x_t+W_{ho}h_{t-1}+b_o) \\
 h_t=o_t\circ\tanh(c_t) \\
 z_t=softmax(W_{hz}+b_z)
 $$
+矩阵形式：
+$$
+\left [ \begin{matrix}
+i_t \\ f_t \\ o_t \\ g_t
+\end{matrix} \right ]
+=
+\left [ \begin{matrix}
+\sigma \\ \sigma \\ \sigma \\ \tanh
+\end{matrix} \right ]
+\left( W^T
+\left [ \begin{matrix}
+x_t \\ h_{t-1}
+\end{matrix} \right ]
++b \right)
+$$
+
+
 误差逆传播的推导以后再补充。
 
  
