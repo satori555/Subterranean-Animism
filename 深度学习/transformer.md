@@ -55,6 +55,12 @@ Normalize：对每一层所有神经元上的数据做normalization（不考虑b
 
 
 
+整个流程如图：
+
+![transformer_resideual_layer_norm_3](../image_storage/transformer/transformer_resideual_layer_norm_3.png)
+
+
+
 ## 参考资料：
 
 [1] https://arxiv.org/abs/1706.03762
