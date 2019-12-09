@@ -1,29 +1,31 @@
 # Long short-term memory (LSTM)
 
-LSTM可以解决普通RNN的梯度消失问题。
+LSTM可以解决普通RNN的梯度消失问题，可以学习长期依赖信息。
 
-回忆一下普通RNN，当前时刻的输出$z_t$取决于隐藏层$h_t$，而隐藏层$h_t$取决于当前时刻的输入$x_t$和上一时刻的隐藏层$h_{t-1}$。LSTM在RNN的基础上，多了一个隐藏状态$C_t$和四个门控结构（或者说三个门，其中输入门由两部分$i_t$和$g_t$组成），如图：
+回忆一下普通RNN，当前时刻的输出$z_t$取决于隐藏层$h_t$，而隐藏层$h_t$取决于当前时刻的输入$x_t$和上一时刻的隐藏层$h_{t-1}$。LSTM在RNN的基础上，多了两个Cell状态$C_t,\widetilde C_t$和三个门控结构$i_t,f_t,o_t$，如图：
 
-![image](../image_storage/lstm.png)
+![lstm](..\image_storage\LSTM3-chain.png)
 
-四个门分别接收当前时刻的输入$x_t$和上一时刻隐藏层的状态$h_{t-1}$，然后计算隐藏状态$C_t$，最后隐藏状态$C_t$和输出门$o_t$决定当前时刻的隐藏层$h_t$，同时输出$z_t$。公式如下：
+先看公式：
 $$
-i_t=\sigma(W_{xi}x_t+W_{hi}h_{t-1}+b_i) \\
+\begin{align}
 f_t=\sigma(W_{xf}x_t+W_{hf}h_{t-1}+b_f) \\
+i_t=\sigma(W_{xi}x_t+W_{hi}h_{t-1}+b_i) \\
+\widetilde C_t=\tanh(W_{xc}x_t+W_{hc}h_{t-1}+b_c) \\
 o_t=\sigma(W_{xo}x_t+W_{ho}h_{t-1}+b_o) \\
-g_t=\tanh(W_{xc}x_t+W_{hc}h_{t-1}+b_c) \\
-c_t=f_t\circ c_{t-1}+i_t\circ g_t \\
-h_t=o_t\circ\tanh(c_t) \\
-z_t=softmax(W_{hz}+b_z)
+C_t=f_t\circ C_{t-1}+i_t\circ \widetilde C_t \\
+h_t=o_t\circ\tanh(C_t) \\
+z_t=softmax(W_{hz}h_t+b_z)
+\end{align}
 $$
 矩阵形式：
 $$
 \left [ \begin{matrix}
-i_t \\ f_t \\ o_t \\ g_t
+f_t \\ i_t \\ \widetilde C_t \\ o_t
 \end{matrix} \right ]
 =
 \left [ \begin{matrix}
-\sigma \\ \sigma \\ \sigma \\ \tanh
+\sigma \\ \sigma \\ \tanh \\ \sigma
 \end{matrix} \right ]
 \left( W^T
 \left [ \begin{matrix}
@@ -32,21 +34,34 @@ x_t \\ h_{t-1}
 +b \right)
 $$
 
+### 如何理解LSTM？
 
-误差逆传播的推导以后再补充。
+普通的RNN中，$h_{t-1}$只能保存短时记忆，LSTM通过Cell状态可以保存长期的记忆。
 
-## BiLSTM
+三个门经过sigmoid函数被映射到0到1之间，做乘法后可以控制记忆（1）或遗忘（0）。公式（5，6）中圆圈代表矩阵中对应元素相乘。
 
-输入数据通过前向与后向的LSTM，然后拼接。
+公式（3）生成一个备选状态$\widetilde C_t$，公式（5）的第一项参数控制上一时刻Cell状态$C_{t-1}$哪些要留下哪些要遗忘，第二项参数控制新加入的Cell状态，然后得到当前cell状态$C_t$。
 
-## LSTM参数数量
+当前的隐藏层状态$h_t$由Cell状态和输入门$o_t$一起决定。
+
+最后由$h_t$输出$z_t$。
+
+
+
+### BiLSTM
+
+LSTM的一个变种，输入数据通过前向与后向的LSTM，然后拼接。
+
+### LSTM参数数量
 
 设输入层有1000个cell，LSTM有2000个cell，则参数数量为$(1000\times2000\times2+2000)\times4\approx16M$
 
 
 
-## 参考资料：
+### 参考资料：
 
 [1] arXiv:1610.02583
 
 [2] http://colah.github.io/posts/2015-08-Understanding-LSTMs/
+
+[3] https://zhuanlan.zhihu.com/p/27118363
