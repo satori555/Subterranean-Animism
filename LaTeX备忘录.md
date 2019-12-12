@@ -46,6 +46,8 @@ $$
 
 各种等号 $\equiv \simeq \doteq \approx \propto \neq$  不等号 $\le \ge \ll \gg$
 
+波浪号 $\sim$
+
 
 
 如何将下标放在正下方？
