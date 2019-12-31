@@ -2,15 +2,11 @@
 
 ### 网络结构
 
-input -> encoder -> decoder -> output
-
-encoder和decoder各有6层。（补充图）
+输入 -> 6层encoder -> 6层decoder -> 输出
 
 ### Encoder
 
 每个encoder包含Self-Attention和Feed Forword NN两层。
-
-
 
 ### Positional Encoding
 
@@ -18,46 +14,58 @@ encoder和decoder各有6层。（补充图）
 
 在decoder的最底层也要输入相对应的位置编码。
 
-
-
 ### Self-Attention
 
-Embedding: dim = 512
+词嵌入Embedding维度为dim（下图中dim=4），句子长度seq，输入矩阵X，shape(seq, dim) 
 
-sequence lengths: seq = 2
+Query, Key and Value matrices: Q, K, V, shape(seq, 64)。64为QKV向量的维度，下图中为3。
 
-Attention vectors: Q, K, V, size = (64 * seq)
+计算矩阵Q: $XW_q=Q$，计算K和V方法类似。参数：Wq, Wk, Wv, shape(dim, 64)
 
-参数：Wq, Wk, Wv, size = (64 * dim)
+注意力计算：
 $$
 Attention(Q,K,V)=Softmax\left( \frac{QK^T}{\sqrt{64}} \right)V
 $$
 
+如图，输出Z即为Attention，shape(seq, 64)：
+
+![transformer1](D:\Users\test\Documents\GitHub\Subterranean-Animism\image_storage\transformer1.png)
+
+
+
 ### Multi-Head Attention:
 
-使用8个Attention，拼接起来，size = (512 * seq). (512 = 8 * 64)
+Transformer使用了8个Attention，单个Attention的shape为(seq, 64)，8个拼起来shape(seq, 512)
 
-权重参数Wo，size = (dim * 512)
+现在我们想把Attention的shape变为和输入X一致，加入一个权重矩阵Wo，shape(512, dim)，让Attention矩阵和Wo矩阵相乘，得到Z矩阵，shape(seq, dim)，和X一致。
 
-输出Z矩阵，size = (dim, seq)
+整个计算Attention的流程如图：
+
+![transformer_multi-headed_self-attention-recap](..\image_storage\transformer2.png)
 
 
 
 ### Residues and Layer Normalization
 
-Add：$x_i$为embedding加positional encoding，$z_i$为self-attention层的输出。实际上进入全连接层的是经过Layer Nornalization的$x_i+z_i$。
+Add (redisual connection)：X为embedding加positional encoding，Z为self-attention层的输出。实际上进入全连接层的是经过Layer Nornalization的X+Z。
 
 Normalize：对每一层所有神经元上的数据做normalization（不考虑batch）。
 
-比较：batch normalization是对每个神经元上的一个batch的数据做normalization。
+比较：batch normalization是对每个神经元上的一个batch的数据做normalization。batch和layer normalization可以看作在两个互相垂直的维度上做归一化。
 
 ### Decoder
 
+每一层decoder包含两级Attention。
 
+第一级Masked Multi-head Attention加入了Mask操作，即我们只能attend到前面已经翻译过的输出词语，后面的词语被覆盖掉了（通过设置相应的positional encoding为-inf）
+
+第二级encoder-decoder attention，它的Q来自前一级decoder层的输出，但K和V来自encoder，这使得decoder的每个位置都可以attend到输入序列的每一个位置。
 
 整个流程如图：
 
-![transformer_resideual_layer_norm_3](../image_storage/transformer/transformer_resideual_layer_norm_3.png)
+![transformer_resideual_layer_norm_3](../image_storage/transformer3.png)
+
+
 
 
 
@@ -67,4 +75,3 @@ Normalize：对每一层所有神经元上的数据做normalization（不考虑b
 
 [2] https://jalammar.github.io/illustrated-transformer/
 
-[3] https://www.jianshu.com/p/c94909b835d6
