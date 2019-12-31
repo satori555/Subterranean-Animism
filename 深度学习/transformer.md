@@ -41,7 +41,7 @@ Transformer使用了8个Attention，单个Attention的shape为(seq, 64)，8个�
 
 整个计算Attention的流程如图：
 
-![transformer_multi-headed_self-attention-recap](..\image_storage\transformer2.png)
+![transformer2](..\image_storage\transformer2.png)
 
 
 
@@ -63,7 +63,7 @@ Normalize：对每一层所有神经元上的数据做normalization（不考虑b
 
 整个流程如图：
 
-![transformer_resideual_layer_norm_3](../image_storage/transformer3.png)
+![transformer3](../image_storage/transformer3.png)
 
 
 
