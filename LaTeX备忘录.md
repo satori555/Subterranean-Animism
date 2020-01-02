@@ -1,10 +1,26 @@
 # LaTeX备忘录
 
-### 持续更新，想到什么加什么。
+持续更新，想到什么加什么。
+
+### 上下标和运算符
 
 向量：$\vec x$ 加粗：$\boldsymbol x$
 
-字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$
+字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$ 
+
+将下标放在正下方 $\max \limits_x f(x)$ （一般用不到）
+
+圆圈 $a\circ b$  加减 $\pm$ 乘号 $\times$  除号 $\div$  直积 $\otimes$ 点乘 $a\cdot b$
+
+各种等号 $\equiv \simeq \doteq \approx \propto \neq$  不等号 $\le \ge \ll \gg$
+
+波浪号 $\sim$ 箭头 $\to$ 属于 $\in$ 无穷大 $\infty$ 
+
+求和$\sum$ 连乘 $\prod$ 
+
+
+
+### 大型公式
 
 多行公式对齐
 $$
@@ -14,7 +30,7 @@ f(x) &= x1 \\
 &= x3
 \end{align}
 $$
-大括号
+
 $$
 f(x)=
 \begin{cases}
@@ -22,9 +38,9 @@ f(x)=
 \sin(t) & t\ne 1
 \end{cases}
 $$
- 矩阵
+
 $$
- \begin{Bmatrix}
+\begin{Bmatrix}
    1 & 2 & 3 \\
    4 & 5 & 6 \\
    7 & 8 & 9
@@ -40,18 +56,16 @@ $$
 
 
 
-二元运算符：
-
-圆圈 $a\circ b$  加减 $\pm$ 乘号 $\times$  除号 $\div$  直积 $\otimes$ 点乘 $a\cdot b$
-
-各种等号 $\equiv \simeq \doteq \approx \propto \neq$  不等号 $\le \ge \ll \gg$
-
-波浪号 $\sim$
 
 
+### 空格
 
-如何将下标放在正下方？
-
-$\max \limits_x f(x)$
-
-求和$\sum$ 连乘 $\prod$
+| 不同长度的空格 |            |             |                |
+| -------------- | ---------- | ----------- | -------------- |
+| 两个quad空格   | a \qquad b | $a\qquad b$ | 两个*m*的宽度  |
+| quad空格       | a \quad b  | $a \quad b$ | 一个*m*的宽度  |
+| 大空格         | a\ b       | $a\ b$      | 1/3*m*宽度     |
+| 中等空格       | a\;b       | $a\;b$      | 2/7*m*宽度     |
+| 小空格         | a\,b       | $a\,b$      | 1/6*m*宽度     |
+| 没有空格       | ab         | $ab$        |                |
+| 紧贴           | a\\!b      | $a\!b$      | 缩进1/6*m*宽度 |
