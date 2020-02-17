@@ -29,7 +29,7 @@ $$
 
 如图，输出Z即为Attention，shape(seq, 64)：
 
-![transformer1](D:\Users\test\Documents\GitHub\Subterranean-Animism\image_storage\transformer1.png)
+![transformer1](../image_storage/transformer1.png)
 
 
 
@@ -41,7 +41,7 @@ Transformer使用了8个Attention，单个Attention的shape为(seq, 64)，8个�
 
 整个计算Attention的流程如图：
 
-![transformer2](..\image_storage\transformer2.png)
+![transformer2](../image_storage/transformer2.png)
 
 
 
