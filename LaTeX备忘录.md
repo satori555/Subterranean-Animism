@@ -14,7 +14,7 @@
 
 各种等号 $\equiv \simeq \doteq \approx \propto \neq$  不等号 $\le \ge \ll \gg$
 
-波浪号 $\sim$ 箭头 $\to$ 属于 $\in$ 无穷大 $\infty$ 
+波浪号 $\sim$ 箭头 $\to$ 属于 $\in$ 交集 $\cap$ 并集  $\cup$ 无穷大 $\infty$ 
 
 求和$\sum$ 连乘 $\prod$ 
 
