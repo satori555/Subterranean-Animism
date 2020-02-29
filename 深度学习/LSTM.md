@@ -4,7 +4,7 @@ LSTM可以解决普通RNN的梯度消失问题，可以学习长期依赖信息�
 
 回忆一下普通RNN，当前时刻的输出$z_t$取决于隐藏层$h_t$，而隐藏层$h_t$取决于当前时刻的输入$x_t$和上一时刻的隐藏层$h_{t-1}$。LSTM在RNN的基础上，多了两个Cell状态$C_t,\widetilde C_t$和三个门控结构$i_t,f_t,o_t$，如图：
 
-![lstm](..\image_storage\LSTM3-chain.png)
+![lstm](../image_storage/LSTM3-chain.png)
 
 先看公式：
 $$

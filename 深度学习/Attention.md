@@ -10,7 +10,7 @@
 
 Attention计算流程：
 
-![attention](..\image_storage\attention.png)
+![attention](../image_storage/attention.png)
 
 上图中的A是encoder，B是decoder。
 
