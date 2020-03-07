@@ -1,13 +1,3 @@
-# 语言模型 2
-
-语言模型的整理分三部分：
-
-+ 语言模型 1：从 n-gram 到 word2vec
-
-+ 语言模型 2：ELMo，GPT，BERT。
-
-+ 语言模型 3：BERT之后
-
 ## ELMo
 
 双向 + BiLSTM
