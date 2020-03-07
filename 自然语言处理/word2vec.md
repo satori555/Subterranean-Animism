@@ -50,7 +50,7 @@ $$
 
 
 
-参考：
+##### 参考：
 
 [1] 通俗理解word2vec - 简书
 https://www.jianshu.com/p/471d9bfbd72f
