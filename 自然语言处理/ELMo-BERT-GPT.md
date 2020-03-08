@@ -8,10 +8,6 @@ ELMO使用两层 BiLSTM 网络进行训练，两个方向的隐藏层向量拼�
 
 
 
-
-
-
-
 ## BERT
 
 双向 + transfomer
