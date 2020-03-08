@@ -8,11 +8,7 @@ ELMO使用两层 BiLSTM 网络进行训练，两个方向的隐藏层向量拼�
 
 
 
-## GPT
 
-单向 + transformer
-
-坚持使用单向语言模型，保留了根据上文生成下文的能力，原始的BERT并不具备。
 
 
 
@@ -72,6 +68,18 @@ Bert 的词嵌入由三种 embedding 求和得到。
 
 
 
+
+
+## GPT/GPT-2
+
+单向 + transformer，对 transformer 结构做了调整。
+
+GPT-2 超大参数量 1542M（ELMo 94M，BERT 340M）
+
+使用单向语言模型，即 Decoder 的 Masked Multi-Head Attention，保留了根据上文生成下文的能力，原始的BERT并不具备。
+
+
+
 参考：
 
 [1] 图解BERT模型：从零开始构建BERT - 云+社区 - 腾讯云
@@ -83,5 +91,8 @@ http://www.davidsbatista.net/blog/2018/12/06/Word_Embeddings/
 [3] 从语言模型看Bert的善变与GPT的坚守 - 云+社区 - 腾讯云
 https://cloud.tencent.com/developer/article/1429585
 
-[4] 李宏毅-ELMO, BERT, GPT讲解_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili
+[4] NLP——GPT对比GPT-2 - 知乎
+https://zhuanlan.zhihu.com/p/96791725?from_voters_page=true
+
+[5] 李宏毅-ELMO, BERT, GPT讲解_哔哩哔哩 (゜-゜)つロ 干杯~-bilibili
 https://www.bilibili.com/video/av56235038/?spm_id_from=333.788.videocard.4
