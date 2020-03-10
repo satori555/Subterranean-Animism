@@ -31,6 +31,10 @@ $$
 
 ![transformer1](../image_storage/transformer1.png)
 
+关于 Q K V 矩阵的进一步解释：
+
+对于输入的每一个 token 都有一个 query 向量，key 向量和 value 向量。例如我们想知道 $x_1$ 位置的 attention，我们用 query 向量 $q_1$ 去乘每一个 key 向量 $k_i$，得到的值 $q_1k_i$ 相当于一个权重，再（经过归一化和 softmax）乘以对应的 value 向量 $v_i$ 并加起来就得到了 attention。
+
 
 
 ## Multi-Head Attention:
