@@ -1,6 +1,6 @@
 # word2vec
 
-一般分为 CBOW (Continuous Bag-of-Words) 与 Skip-Gram 两种模型。
+word2vec 分为 CBOW (Continuous Bag-of-Words) 与 Skip-Gram 两种模型。
 
 CBOW 模型的训练输入是某一个特征词的上下文相关的词对应的词向量，而输出就是这特定的一个词的词向量。　
 
