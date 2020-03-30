@@ -38,5 +38,28 @@ MLM (musked language model) 几乎不会过拟合，因此可以去掉 dropout �
 
 增加了 10 倍以上的训练数据。
 
+
+
+**参考：** 原作者蓝振忠的直播课程：https://www.bilibili.com/video/BV1C7411c7Ag?p=4
+
+
+
 # XLNeT
 
+自回归与自编码。
+
+排列组合序列：解决上下文预测问题。
+
+双流注意力：解决位置信息缺失问题。
+
+Transformer-XL：长序列。
+
+
+
+##### 参考：
+
+[1] XLNet原理浅析 - 知乎
+https://zhuanlan.zhihu.com/p/70395238
+
+[2] XLNet:运行机制及和Bert的异同比较 - 知乎
+https://zhuanlan.zhihu.com/p/70257427
