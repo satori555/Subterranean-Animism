@@ -18,6 +18,8 @@ $$
 
 波浪号 $\sim$ 箭头 $\to$ 属于 $\in$ 交集 $\cap$ 并集  $\cup$ 无穷大 $\infty$ 
 
+左右箭头 $\leftrightarrow$ $\Leftrightarrow$
+
 求和$\sum$ 连乘 $\prod$ 
 
 
