@@ -48,11 +48,26 @@ $$
 
 
 
-此外还有尺度变化和特征解耦等。
+此外还有尺度变换 $s_{ii}$ 和特征解耦等。
 
 
 
-### Real NVP：real-valued non-volume preserving transformations
+### RealNVP：real-valued non-volume preserving transformations
+
+RealNVP是NICE的改进，它一般化了耦合层，并且在耦合模型中引入了卷积层，此外还提出了多尺度层的设计。
+
+##### 仿射耦合层
+
+NICE模型中的加性耦合层过于简单，在RealNVP中，加性和乘性耦合层结合在一起，成为一个一般的**仿射耦合层**：
+$$
+h_{1:d} = x_{1:d} \\
+h_{d+1:D} = x_{d+1:D} \odot \exp (sx_2) + t(x_1)(x_1)
+$$
+
+
+
+
+
 
 
 

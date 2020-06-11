@@ -12,7 +12,7 @@
 $$
 \mathop{\arg\max}_\theta
 $$
-圆圈 $a\circ b$  加减 $\pm$ 乘号 $\times$  除号 $\div$  直积 $\otimes$ 点乘 $a\cdot b$ 横点 $\dots$ 竖点 $\vdots$  
+圆圈 $a\circ b$  加减 $\pm$ 乘号 $\times$  除号 $\div$  直积 $\otimes$ 元素相乘 $\odot$ 点乘 $a\cdot b$ 横点 $\dots$ 竖点 $\vdots$  
 
 各种等号 $\equiv \simeq \doteq \approx \propto \neq$  不等号 $\le \ge \ll \gg$
 
