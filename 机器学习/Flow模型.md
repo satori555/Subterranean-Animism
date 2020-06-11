@@ -16,8 +16,6 @@ $$
 
 ### NICE: Non-linear Independent Components Estimation
 
-##### 耦合层
-
 由于三角阵的行列式最容易计算，我们可以想办法使变换 $f(x)$ 的雅可比矩阵为三角阵。在NICE中，输入数据 $x$ 被拆分成两部分 $x_1,x_2$，然后做变换：
 $$
 h_1=x_1 \\
@@ -41,9 +39,20 @@ x_2=h_2-m(h_1)
 $$
 由于这个变换的一部分是恒等变换，为了增强拟合能力我们需要叠加多个耦合层：
 $$
-x=h^{(0)}\Leftrightarrow
+x=h^{(0)}\Leftrightarrow h^{(1)}\Leftrightarrow h^{(2)}\Leftrightarrow 
+\cdots\Leftrightarrow h^{(n)} =z
 $$
+每一层的行列式都是 1 。
 
+要注意如果耦合的顺序一直保持不变，那么第一部分依然是平凡的。可以考虑在每次加性耦合之前，打乱或者反转输入的各个维度的顺序，或简单地交换这两部分的位置，使信息可以充分混合。
+
+
+
+此外还有尺度变化和特征解耦等。
+
+
+
+### Real NVP：real-valued non-volume preserving transformations
 
 
 
