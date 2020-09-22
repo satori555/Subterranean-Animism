@@ -1,5 +1,10 @@
 # SHELL
 
+参考：Shell 教程 | 菜鸟教程
+https://www.runoob.com/linux/linux-shell.html
+
+
+
 Bash是大多数Linux系统默认的shell：
 
 ```bash
@@ -13,15 +18,38 @@ echo "Hello World!"
 
 
 
-变量：变量名和等号之间不能有空格。使用的时候在前面加一个 `$` 符号。也可以再加一个花括号，告诉解释器变量的边界。
+### 变量
+
+变量名和等号之间不能有空格。使用的时候在前面加一个 `$` 符号。也可以再加一个花括号，告诉解释器变量的边界。
+
+字符串：单引号里的任何字符都会原样输出。双引号字符串里可以有转义字符 `\` 和变量 `$` 。
+
+数组：用小括号表示数组，数组中的元素用空格隔开，如 `array=(a b c d)` 。
+
+读取数组：`echo ${array[0]}` 。读取所有元素：`echo ${array[@]}` 。
+
+注释：以 `#` 开头的行是注释。多行注释可以用以下格式：
+
+```bash
+:<<EOF
+注释内容...
+注释内容...
+注释内容...
+EOF
+```
+
+`EOF` 也可以用其他的符号。
 
 
 
 ### 各种括号的作用
 
+参考：shell中各种括号的作用()、(())、[]、[[]]、{}_乌托邦-CSDN博客
+https://blog.csdn.net/taiyang1987912/article/details/39551385
+
 1. 单小括号 ()
 
-   可以用来初始化数组，如 `array=(a b c d)` 
+   可以用来初始化数组
 
 2. 双小括号 (())
 
@@ -43,10 +71,5 @@ echo "Hello World!"
 
 
 
-参考：
 
-1. shell中各种括号的作用()、(())、[]、[[]]、{}_乌托邦-CSDN博客
-   https://blog.csdn.net/taiyang1987912/article/details/39551385
 
-2. Shell 教程 | 菜鸟教程
-   https://www.runoob.com/linux/linux-shell.html
