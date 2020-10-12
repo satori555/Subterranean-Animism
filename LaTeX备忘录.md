@@ -8,6 +8,8 @@
 
 字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$ 
 
+表示集合之类的空心字母 $\mathbb{E}$ 、加粗字母 $\mathbf{D}$ 
+
 将下标放在正下方 $\max \limits_x f(x)$  
 $$
 \mathop{\arg\max}_\theta
