@@ -6,7 +6,7 @@
 
 向量：$\vec x$ 加粗：$\boldsymbol x$
 
-字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$ 
+字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$ $x^\top$ 
 
 表示集合之类的空心字母 $\mathbb{E}$ 、加粗字母 $\mathbf{D}$ 
 
@@ -25,6 +25,8 @@ $$
 求和 $\sum$ 连乘 $\prod$ 
 
 特殊字体的字母 $\mathbb{R}$  $\mathcal{GP}$  $\mathscr{L}$
+
+逻辑 $\forall$  $\exist$ 
 
 
 
