@@ -22,7 +22,9 @@ $$
 
 左右箭头 $\leftrightarrow$ $\Leftrightarrow$
 
-求和$\sum$ 连乘 $\prod$ 
+求和 $\sum$ 连乘 $\prod$ 
+
+特殊字体的字母 $\mathbb{R}$  $\mathcal{GP}$  $\mathscr{L}$
 
 
 
