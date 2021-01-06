@@ -6,7 +6,7 @@
 
 向量：$\vec x$ 加粗：$\boldsymbol x$
 
-字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$ $x^\top$ 
+字母上的特殊符号：$\widetilde P$ $\hat x$  $\dot x$ $\ddot x$ $\overline x$ $x^\top$ $\AA$  
 
 表示集合之类的空心字母 $\mathbb{E}$ 、加粗字母 $\mathbf{D}$ 
 
