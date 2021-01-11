@@ -32,7 +32,7 @@ $$
 
 ### 大型公式
 
-多行公式对齐
+多行公式对齐 align
 $$
 \begin{align}
 f(x) &= x1 \\
@@ -41,6 +41,15 @@ f(x) &= x1 \\
 \end{align}
 $$
 
+将相关的公式放到一起 gathered
+$$
+\begin{gathered}
+f(x)=x \\
+g(x)=x^2 \\
+h(x)=x^3
+\end{gathered}\tag{X}
+$$
+分段函数 cases
 $$
 f(x)=
 \begin{cases}
@@ -49,12 +58,22 @@ f(x)=
 \end{cases}
 $$
 
+矩阵 array
 $$
-\begin{Bmatrix}
+\left(
+\begin{array}{clr}
+a & b & c \\
+1 & 2 & 3
+\end{array}
+\right)
+$$
+矩阵 matrix (无括号) pmatrix (小括号) bmatrix (方括号) Bmatrix (花括号) vmatrix (单竖线) Vmatrix (双竖线)
+$$
+\begin{Vmatrix}
    1 & 2 & 3 \\
    4 & 5 & 6 \\
    7 & 8 & 9
-  \end{Bmatrix} \tag{M}
+  \end{Vmatrix}
 $$
 行间矩阵：我们使用矩阵 $\bigl( \begin{smallmatrix} a & b \\ c & d \end{smallmatrix} \bigr)$ 作为因子矩阵，将其...
 
