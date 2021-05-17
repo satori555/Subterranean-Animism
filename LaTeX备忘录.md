@@ -28,6 +28,8 @@ $$
 
 逻辑 $\forall$  $\exist$ 
 
+左矢右矢  $\langle a| b \rangle$
+
 
 
 ### 大型公式
@@ -111,5 +113,4 @@ $$
 | $\delta$ $\Delta$                   | $\kappa$ $\Kappa$             | $\pi$ $\Pi$             | $\chi$ $\Chi$           |
 | $\epsilon$ $\varepsilon$ $\Epsilon$ | $\lambda$ $\Lambda$           | $\rho$ $\varrho$ $\Rho$ | $\psi$ $\Psi$           |
 | $\zeta$ $Zeta$                      | $\mu$ $\Mu$                   | $\sigma$ $\Sigma$       | $\omega$ $\Omega$       |
-
 
